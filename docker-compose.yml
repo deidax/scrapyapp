@@ -1,0 +1,45 @@
+version: '3'
+services:
+  ###
+  # services
+  ###
+    django-app:
+        build: .
+        # command: python manage.py runserver 0.0.0.0:8000
+        container_name: django_server
+        volumes:
+            - .:/usr/src/app
+        environment: 
+            - SECRET_KEY=sigma274ing@dwEtRusT#
+        ports:
+            - "8000:8000"
+        depends_on:
+            - scrapyd-service
+        networks:
+            - backend
+    scrapyd-service:
+        image: germey/scrapyd
+        container_name: scrapyd_server
+        volumes:
+            - .:/usr/src/app
+        working_dir: /usr/src/app/scrapy_app
+        ports:
+            - "6800:6800"
+        networks:
+            - backend
+    nginx:
+        build: ./nginx
+        volumes: 
+            - static:/static
+        ports: 
+            - "80:80"
+        depends_on:
+            - django-app
+        networks: 
+            - backend 
+networks:
+    backend:
+        driver: bridge
+
+volumes: 
+    static:

@@ -1,0 +1,6 @@
+Django>=3.0.6,<3.1
+gunicorn==20.0.4
+scrapyd
+scrapy
+python-scrapyd-api
+pyfiglet

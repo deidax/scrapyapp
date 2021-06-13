@@ -1,0 +1,100 @@
+<div class="container mt-5">
+    <div id="status" class="mb-1"></div>
+    <div id="server_down_error"></div>
+    <h4 id="node_name"></h4>
+    <hr>
+    <h5><i class="fas fa-cogs mr-1"></i>Running spiders</h5>
+    <table id="running" class="display" width="100%"></table>
+    <!-- CSV download button -->
+    <a href="/csv/" id="csv_btn" class="btn btn-success col-md-2" role="button" aria-pressed="true"><i class="fas fa-download mr-1"></i> CSV</a>
+    <hr>
+    <h5><i class="fas fa-check-double mr-1"></i>finished spiders</h5>
+    <table id="finished" class="display" width="100%"></table>
+</div>
+<script>
+$(document).ready(function() {
+    status = ''
+    node_name = ''
+    finished = []
+    pending = []
+    running = []
+   
+    $.get('http://0.0.0.0:6800/listjobs.json?project=default', (result) => {
+        console.log(result)
+        status = result.status
+        node_name = result.node_name
+        finished = result.finished
+        pending = result.pending
+        running = result.running
+        scraper_date = ''
+        
+    }).done(function() {
+
+        
+
+        document.getElementById("node_name").innerHTML = "<i class='fas fa-server mr-1'></i>Server name: "+node_name;
+        document.getElementById("status").innerHTML = '<span class="badge badge-pill badge-success">'+status+'</span>';
+        if(running.length > 0)
+        {
+            $.get('/scraper_date/', (result) => {
+                scraper_date = result
+                countUpFromTime(scraper_date, 'countup1');
+            })
+            $("#scrape_btn").attr("disabled", true);
+            $("#scrape_btn").html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Scraper is running...');
+        }
+        else
+            $('#scrape_btn').removeAttr("disabled");
+
+        var table = $('#running').DataTable( {
+            data: running,
+            columns: [
+                {data:'id', title: 'Id'},
+                {data:'spider', title: 'Spider'},
+                {data:'pid', title: 'Pid'},
+                {data:'start_time', title: 'Start time'},
+                {
+                    'data': null,
+                    'render': function (data, type, row) {
+                        return '<a href="http://0.0.0.0:6800/logs/default/'+row.spider+'/'+row.id+'.log" class="btn btn-info active" role="button" aria-pressed="true" target="_blank"><i class="fas fa-file-medical-alt mr-1"></i> Logs</a>'
+                    }
+                },
+                {
+                    'data': null,
+                    'render': function (data, type, row) {
+                        return '<button class="btn btn-danger stopButton" id="' + row.id +'"><i class="fas fa-ban mr-1"></i>Stop</button>'
+                    }
+                },
+            ]
+        });
+        var table = $('#finished').DataTable( {
+            data: finished,
+            columns: [
+                {data:'id', title: 'Id'},
+                {data:'spider', title: 'Spider'},
+                {data:'start_time', title: 'Start time'},
+                {data:'end_time', title: 'End time'},
+            ]
+        });
+
+        $('#running tbody').on('click', 'button', function () {
+            var jobid = $(this).attr('id');
+            $.post('http://0.0.0.0:6800/cancel.json', { project:"default", job:jobid }, function(){
+                location.reload()
+            })
+        });
+
+        $.get('/get_csv_filename/', (result) => {
+            document.getElementById("csv_btn").innerHTML = '<i class="fas fa-download mr-1"></i>'+result.filename+'<span class="badge bg-primary ml-2">'+result.count+'</span>'
+        })
+        
+
+    }).fail(function() {
+        document.getElementById("status").innerHTML = '<span class="badge badge-pill badge-danger">Server error. probably the server is down</span>';
+    })
+
+    
+    
+
+})
+</script>

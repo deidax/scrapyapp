@@ -1,0 +1,123 @@
+2021-06-12 11:24:56 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapy_app)
+2021-06-12 11:24:56 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.8.5 (default, May 27 2021, 13:30:53) - [GCC 9.3.0], pyOpenSSL 19.0.0 (OpenSSL 1.1.1f  31 Mar 2020), cryptography 2.8, Platform Linux-5.8.0-53-generic-x86_64-with-glibc2.29
+2021-06-12 11:24:56 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'scrapy_app', 'DOWNLOAD_DELAY': 3, 'FEED_FORMAT': 'csv', 'FEED_URI': '', 'LOG_FILE': 'logs/default/icrawler/cf8a1760cb7011eba1e33da6eb34eaca.log', 'NEWSPIDER_MODULE': 'scrapy_app.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['scrapy_app.spiders'], 'USER_AGENT': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'}
+2021-06-12 11:24:57 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2021-06-12 11:24:57 [root] INFO: =====> MANUFACTURER NAME TO SCRAP:: [SIEMENS]
+2021-06-12 11:24:57 [root] INFO: =====> COMPANY NAME TO SCRAP:: [SIEMENS]
+2021-06-12 11:24:57 [root] INFO: =====> CSV DATA FILE NAME:: [siemens.csv]
+2021-06-12 11:24:57 [root] INFO: =====> Generating the search pattern...
+2021-06-12 11:24:57 [root] INFO: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'C', 'D', 'E', 'F', 'H', 'K', 'M', 'N', 'P', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', '01', '02', '03', '04', '05', '06', '07', '08', '09', '0A', '0C', '0D', '0E', '0F', '0H', '0K', '0M', '0N', '0P', '0R', '0S', '0T', '0V', '0W', '0X', '0Y', '12', '13', '14', '15', '16', '17', '18', '19', '1A', '1C', '1D', '1E', '1F', '1H', '1K', '1M', '1N', '1P', '1R', '1S', '1T', '1V', '1W', '1X', '1Y', '23', '24', '25', '26', '27', '28', '29', '2A', '2C', '2D', '2E', '2F', '2H', '2K', '2M', '2N', '2P', '2R', '2S', '2T', '2V', '2W', '2X', '2Y', '34', '35', '36', '37', '38', '39', '3A', '3C', '3D', '3E', '3F', '3H', '3K', '3M', '3N', '3P', '3R', '3S', '3T', '3V', '3W', '3X', '3Y', '45', '46', '47', '48', '49', '4A', '4C', '4D', '4E', '4F', '4H', '4K', '4M', '4N', '4P', '4R', '4S', '4T', '4V', '4W', '4X', '4Y', '56', '57', '58', '59', '5A', '5C', '5D', '5E', '5F', '5H', '5K', '5M', '5N', '5P', '5R', '5S', '5T', '5V', '5W', '5X', '5Y', '67', '68', '69', '6A', '6C', '6D', '6E', '6F', '6H', '6K', '6M', '6N', '6P', '6R', '6S', '6T', '6V', '6W', '6X', '6Y', '78', '79', '7A', '7C', '7D', '7E', '7F', '7H', '7K', '7M', '7N', '7P', '7R', '7S', '7T', '7V', '7W', '7X', '7Y', '89', '8A', '8C', '8D', '8E', '8F', '8H', '8K', '8M', '8N', '8P', '8R', '8S', '8T', '8V', '8W', '8X', '8Y', '9A', '9C', '9D', '9E', '9F', '9H', '9K', '9M', '9N', '9P', '9R', '9S', '9T', '9V', '9W', '9X', '9Y', 'AC', 'AD', 'AE', 'AF', 'AH', 'AK', 'AM', 'AN', 'AP', 'AR', 'AS', 'AT', 'AV', 'AW', 'AX', 'AY', 'CD', 'CE', 'CF', 'CH', 'CK', 'CM', 'CN', 'CP', 'CR', 'CS', 'CT', 'CV', 'CW', 'CX', 'CY', 'DE', 'DF', 'DH', 'DK', 'DM', 'DN', 'DP', 'DR', 'DS', 'DT', 'DV', 'DW', 'DX', 'DY', 'EF', 'EH', 'EK', 'EM', 'EN', 'EP', 'ER', 'ES', 'ET', 'EV', 'EW', 'EX', 'EY', 'FH', 'FK', 'FM', 'FN', 'FP', 'FR', 'FS', 'FT', 'FV', 'FW', 'FX', 'FY', 'HK', 'HM', 'HN', 'HP', 'HR', 'HS', 'HT', 'HV', 'HW', 'HX', 'HY', 'KM', 'KN', 'KP', 'KR', 'KS', 'KT', 'KV', 'KW', 'KX', 'KY', 'MN', 'MP', 'MR', 'MS', 'MT', 'MV', 'MW', 'MX', 'MY', 'NP', 'NR', 'NS', 'NT', 'NV', 'NW', 'NX', 'NY', 'PR', 'PS', 'PT', 'PV', 'PW', 'PX', 'PY', 'RS', 'RT', 'RV', 'RW', 'RX', 'RY', 'ST', 'SV', 'SW', 'SX', 'SY', 'TV', 'TW', 'TX', 'TY', 'VW', 'VX', 'VY', 'WX', 'WY', 'XY']
+2021-06-12 11:24:57 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-12 11:24:57 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-12 11:24:57 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_app.pipelines.ScrapyAppPipeline']
+2021-06-12 11:24:57 [scrapy.core.engine] INFO: Spider opened
+2021-06-12 11:24:57 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-12 11:24:57 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2021-06-12 11:25:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/robots.txt> (referer: None)
+2021-06-12 11:25:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000> (referer: None)
+2021-06-12 11:25:06 [root] INFO: ===> CATEGORIES -->
+2021-06-12 11:25:06 [root] INFO:      |__ [Air Compressor]
+2021-06-12 11:25:06 [root] INFO:      |__ [Apparel]
+2021-06-12 11:25:06 [root] INFO:      |__ [Astrological]
+2021-06-12 11:25:06 [root] INFO:      |__ [Audio Visual]
+2021-06-12 11:25:06 [root] INFO:      |__ [Automotive]
+2021-06-12 11:25:06 [root] INFO:      |__ [Bar Code Equipment]
+2021-06-12 11:25:06 [root] INFO:      |__ [Building Maintenance]
+2021-06-12 11:25:06 [root] INFO:      |__ [Cable and Wire]
+2021-06-12 11:25:06 [root] INFO:      |__ [Camera & Vision]
+2021-06-12 11:25:06 [root] INFO:      |__ [Chemicals]
+2021-06-12 11:25:06 [root] INFO:      |__ [Circuit Breaker]
+2021-06-12 11:25:06 [root] INFO:      |__ [Commercial Product Parts]
+2021-06-12 11:25:06 [root] INFO:      |__ [Components]
+2021-06-12 11:25:06 [root] INFO:      |__ [Computer]
+2021-06-12 11:25:06 [root] INFO:      |__ [Consumer Goods]
+2021-06-12 11:25:06 [root] INFO:      |__ [Contactors & Starters]
+2021-06-12 11:25:06 [root] INFO:      |__ [Controls & Indicators]
+2021-06-12 11:25:06 [root] INFO:      |__ [Conveyor]
+2021-06-12 11:25:06 [root] INFO:      |__ [Cutting HSS & Solid Carbide]
+2021-06-12 11:25:06 [root] INFO:      |__ [Cutting Indexables]
+2021-06-12 11:25:06 [root] INFO:      |__ [Data Control System]
+2021-06-12 11:25:06 [root] INFO:      |__ [Data Media]
+2021-06-12 11:25:06 [root] INFO:      |__ [Drives]
+2021-06-12 11:25:06 [root] INFO:      |__ [Electrical Products]
+2021-06-12 11:25:06 [root] INFO:      |__ [ESD]
+2021-06-12 11:25:06 [root] INFO:      |__ [Fire Safety]
+2021-06-12 11:25:06 [root] INFO:      |__ [Fitness]
+2021-06-12 11:25:06 [root] INFO:      |__ [Flame Safety Products]
+2021-06-12 11:25:06 [root] INFO:      |__ [Gluing Systems]
+2021-06-12 11:25:06 [root] INFO:      |__ [GPS]
+2021-06-12 11:25:06 [root] INFO:      |__ [Heating Elements]
+2021-06-12 11:25:06 [root] INFO:      |__ [HMI / MMI / OIT]
+2021-06-12 11:25:06 [root] INFO:      |__ [HVAC]
+2021-06-12 11:25:06 [root] INFO:      |__ [Hydraulics]
+2021-06-12 11:25:06 [root] INFO:      |__ [Integrated Circuits]
+2021-06-12 11:25:06 [root] INFO:      |__ [Labor & Fees]
+2021-06-12 11:25:06 [root] INFO:      |__ [Laboratory Equipment]
+2021-06-12 11:25:06 [root] INFO:      |__ [Lighting]
+2021-06-12 11:25:06 [root] INFO:      |__ [Literature]
+2021-06-12 11:25:06 [root] INFO:      |__ [Machine Parts]
+2021-06-12 11:25:06 [root] INFO:      |__ [Machines]
+2021-06-12 11:25:06 [root] INFO:      |__ [Marketing]
+2021-06-12 11:25:06 [root] INFO:      |__ [Material Handling]
+2021-06-12 11:25:06 [root] INFO:      |__ [Medical Equipment]
+2021-06-12 11:25:06 [root] INFO:      |__ [Motors/GearBox/Clutch]
+2021-06-12 11:25:06 [root] INFO:      |__ [Office Supplies]
+2021-06-12 11:25:06 [root] INFO:      |__ [Panel Accessories]
+2021-06-12 11:25:06 [root] INFO:      |__ [Personal Protective Equipment]
+2021-06-12 11:25:06 [root] INFO:      |__ [Pilot Devices]
+2021-06-12 11:25:06 [root] INFO:      |__ [PLCs/Machine Control]
+2021-06-12 11:25:06 [root] INFO:      |__ [Plumbing]
+2021-06-12 11:25:06 [root] INFO:      |__ [Pneumatics]
+2021-06-12 11:25:06 [root] INFO:      |__ [Power Supplies]
+2021-06-12 11:25:06 [root] INFO:      |__ [Printers]
+2021-06-12 11:25:06 [root] INFO:      |__ [Pumps]
+2021-06-12 11:25:06 [root] INFO:      |__ [RF]
+2021-06-12 11:25:06 [root] INFO:      |__ [Safety Systems]
+2021-06-12 11:25:06 [root] INFO:      |__ [Scales]
+2021-06-12 11:25:06 [root] INFO:      |__ [Security]
+2021-06-12 11:25:06 [root] INFO:      |__ [Semiconductors]
+2021-06-12 11:25:06 [root] INFO:      |__ [Sensors & Switches]
+2021-06-12 11:25:06 [root] INFO:      |__ [Servo Products]
+2021-06-12 11:25:06 [root] INFO:      |__ [Telecommunications]
+2021-06-12 11:25:06 [root] INFO:      |__ [Test Equipment]
+2021-06-12 11:25:06 [root] INFO:      |__ [Tools]
+2021-06-12 11:25:06 [root] INFO:      |__ [Traffic Products]
+2021-06-12 11:25:06 [root] INFO:      |__ [Transformers]
+2021-06-12 11:25:06 [root] INFO:      |__ [Transmission Distribut. Relays]
+2021-06-12 11:25:06 [root] INFO:      |__ [Uncategorized]
+2021-06-12 11:25:06 [root] INFO:      |__ [Valves]
+2021-06-12 11:25:06 [root] INFO:      |__ [Welding]
+2021-06-12 11:25:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=3&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-06-12 11:25:07 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Air Compressor]
+2021-06-12 11:25:07 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Air Compressor/Air Compressor]
+2021-06-12 11:25:07 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=3&CategoryId=112&InStockFlag=false&PageSize=10000000
+2021-06-12 11:25:07 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Air Compressor/Air Compressor Part]
+2021-06-12 11:25:07 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=3&CategoryId=454&InStockFlag=false&PageSize=10000000
+2021-06-12 11:25:07 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Air Compressor/delete this]
+2021-06-12 11:25:07 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=3&CategoryId=9775&InStockFlag=false&PageSize=10000000
+2021-06-12 11:25:08 [scrapy.crawler] INFO: Received SIGTERM, shutting down gracefully. Send again to force 
+2021-06-12 11:25:08 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2021-06-12 11:25:08 [scrapy.crawler] INFO: Received SIGTERM twice, forcing unclean shutdown

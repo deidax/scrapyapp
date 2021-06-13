@@ -1,0 +1,663 @@
+2021-05-25 18:45:24 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapy_app)
+2021-05-25 18:45:24 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.8.5 (default, Jan 27 2021, 15:41:15) - [GCC 9.3.0], pyOpenSSL 19.0.0 (OpenSSL 1.1.1f  31 Mar 2020), cryptography 2.8, Platform Linux-5.8.0-53-generic-x86_64-with-glibc2.29
+2021-05-25 18:45:24 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'scrapy_app', 'DOWNLOAD_DELAY': 3, 'FEED_FORMAT': 'csv', 'FEED_URI': '', 'LOG_FILE': 'logs/default/icrawler/5cdce534bd8911eb8326d176142f2f42.log', 'NEWSPIDER_MODULE': 'scrapy_app.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['scrapy_app.spiders'], 'USER_AGENT': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'}
+2021-05-25 18:45:24 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2021-05-25 18:45:24 [root] INFO: =====> MANUFACTURER NAME TO SCRAP:: [SIEMENS]
+2021-05-25 18:45:24 [root] INFO: =====> COMPANY NAME TO SCRAP:: [SIEMENS]
+2021-05-25 18:45:24 [root] INFO:  ____ ___ _____ __  __ _____ _   _ ____  
+/ ___|_ _| ____|  \/  | ____| \ | / ___| 
+\___ \| ||  _| | |\/| |  _| |  \| \___ \ 
+ ___) | || |___| |  | | |___| |\  |___) |
+|____/___|_____|_|  |_|_____|_| \_|____/ 
+                                         
+
+2021-05-25 18:45:24 [root] INFO: =====> CSV DATA FILE NAME:: [siemens.csv]
+2021-05-25 18:45:24 [root] INFO: =====> Generating the search pattern...
+2021-05-25 18:45:24 [root] INFO: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'C', 'D', 'E', 'F', 'H', 'K', 'M', 'N', 'P', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', '01', '02', '03', '04', '05', '06', '07', '08', '09', '0A', '0C', '0D', '0E', '0F', '0H', '0K', '0M', '0N', '0P', '0R', '0S', '0T', '0V', '0W', '0X', '0Y', '12', '13', '14', '15', '16', '17', '18', '19', '1A', '1C', '1D', '1E', '1F', '1H', '1K', '1M', '1N', '1P', '1R', '1S', '1T', '1V', '1W', '1X', '1Y', '23', '24', '25', '26', '27', '28', '29', '2A', '2C', '2D', '2E', '2F', '2H', '2K', '2M', '2N', '2P', '2R', '2S', '2T', '2V', '2W', '2X', '2Y', '34', '35', '36', '37', '38', '39', '3A', '3C', '3D', '3E', '3F', '3H', '3K', '3M', '3N', '3P', '3R', '3S', '3T', '3V', '3W', '3X', '3Y', '45', '46', '47', '48', '49', '4A', '4C', '4D', '4E', '4F', '4H', '4K', '4M', '4N', '4P', '4R', '4S', '4T', '4V', '4W', '4X', '4Y', '56', '57', '58', '59', '5A', '5C', '5D', '5E', '5F', '5H', '5K', '5M', '5N', '5P', '5R', '5S', '5T', '5V', '5W', '5X', '5Y', '67', '68', '69', '6A', '6C', '6D', '6E', '6F', '6H', '6K', '6M', '6N', '6P', '6R', '6S', '6T', '6V', '6W', '6X', '6Y', '78', '79', '7A', '7C', '7D', '7E', '7F', '7H', '7K', '7M', '7N', '7P', '7R', '7S', '7T', '7V', '7W', '7X', '7Y', '89', '8A', '8C', '8D', '8E', '8F', '8H', '8K', '8M', '8N', '8P', '8R', '8S', '8T', '8V', '8W', '8X', '8Y', '9A', '9C', '9D', '9E', '9F', '9H', '9K', '9M', '9N', '9P', '9R', '9S', '9T', '9V', '9W', '9X', '9Y', 'AC', 'AD', 'AE', 'AF', 'AH', 'AK', 'AM', 'AN', 'AP', 'AR', 'AS', 'AT', 'AV', 'AW', 'AX', 'AY', 'CD', 'CE', 'CF', 'CH', 'CK', 'CM', 'CN', 'CP', 'CR', 'CS', 'CT', 'CV', 'CW', 'CX', 'CY', 'DE', 'DF', 'DH', 'DK', 'DM', 'DN', 'DP', 'DR', 'DS', 'DT', 'DV', 'DW', 'DX', 'DY', 'EF', 'EH', 'EK', 'EM', 'EN', 'EP', 'ER', 'ES', 'ET', 'EV', 'EW', 'EX', 'EY', 'FH', 'FK', 'FM', 'FN', 'FP', 'FR', 'FS', 'FT', 'FV', 'FW', 'FX', 'FY', 'HK', 'HM', 'HN', 'HP', 'HR', 'HS', 'HT', 'HV', 'HW', 'HX', 'HY', 'KM', 'KN', 'KP', 'KR', 'KS', 'KT', 'KV', 'KW', 'KX', 'KY', 'MN', 'MP', 'MR', 'MS', 'MT', 'MV', 'MW', 'MX', 'MY', 'NP', 'NR', 'NS', 'NT', 'NV', 'NW', 'NX', 'NY', 'PR', 'PS', 'PT', 'PV', 'PW', 'PX', 'PY', 'RS', 'RT', 'RV', 'RW', 'RX', 'RY', 'ST', 'SV', 'SW', 'SX', 'SY', 'TV', 'TW', 'TX', 'TY', 'VW', 'VX', 'VY', 'WX', 'WY', 'XY']
+2021-05-25 18:45:24 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-05-25 18:45:24 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-05-25 18:45:24 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_app.pipelines.ScrapyAppPipeline']
+2021-05-25 18:45:24 [scrapy.core.engine] INFO: Spider opened
+2021-05-25 18:45:24 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-05-25 18:45:24 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2021-05-25 18:45:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/robots.txt> (referer: None)
+2021-05-25 18:45:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000> (referer: None)
+2021-05-25 18:45:30 [root] INFO: ===> CATEGORIES -->
+2021-05-25 18:45:30 [root] INFO:      |__ [Air Compressor]
+2021-05-25 18:45:30 [root] INFO:      |__ [Apparel]
+2021-05-25 18:45:30 [root] INFO:      |__ [Astrological]
+2021-05-25 18:45:30 [root] INFO:      |__ [Audio Visual]
+2021-05-25 18:45:30 [root] INFO:      |__ [Automotive]
+2021-05-25 18:45:30 [root] INFO:      |__ [Bar Code Equipment]
+2021-05-25 18:45:30 [root] INFO:      |__ [Building Maintenance]
+2021-05-25 18:45:30 [root] INFO:      |__ [Cable and Wire]
+2021-05-25 18:45:30 [root] INFO:      |__ [Camera & Vision]
+2021-05-25 18:45:30 [root] INFO:      |__ [Chemicals]
+2021-05-25 18:45:30 [root] INFO:      |__ [Circuit Breaker]
+2021-05-25 18:45:30 [root] INFO:      |__ [Commercial Product Parts]
+2021-05-25 18:45:30 [root] INFO:      |__ [Components]
+2021-05-25 18:45:30 [root] INFO:      |__ [Computer]
+2021-05-25 18:45:30 [root] INFO:      |__ [Consumer Goods]
+2021-05-25 18:45:30 [root] INFO:      |__ [Contactors & Starters]
+2021-05-25 18:45:30 [root] INFO:      |__ [Controls & Indicators]
+2021-05-25 18:45:30 [root] INFO:      |__ [Conveyor]
+2021-05-25 18:45:30 [root] INFO:      |__ [Cutting HSS & Solid Carbide]
+2021-05-25 18:45:30 [root] INFO:      |__ [Cutting Indexables]
+2021-05-25 18:45:30 [root] INFO:      |__ [Data Control System]
+2021-05-25 18:45:30 [root] INFO:      |__ [Data Media]
+2021-05-25 18:45:30 [root] INFO:      |__ [Drives]
+2021-05-25 18:45:30 [root] INFO:      |__ [Electrical Products]
+2021-05-25 18:45:30 [root] INFO:      |__ [ESD]
+2021-05-25 18:45:30 [root] INFO:      |__ [Fire Safety]
+2021-05-25 18:45:30 [root] INFO:      |__ [Fitness]
+2021-05-25 18:45:30 [root] INFO:      |__ [Flame Safety Products]
+2021-05-25 18:45:30 [root] INFO:      |__ [Gluing Systems]
+2021-05-25 18:45:30 [root] INFO:      |__ [GPS]
+2021-05-25 18:45:30 [root] INFO:      |__ [Heating Elements]
+2021-05-25 18:45:30 [root] INFO:      |__ [HMI / MMI / OIT]
+2021-05-25 18:45:30 [root] INFO:      |__ [HVAC]
+2021-05-25 18:45:30 [root] INFO:      |__ [Hydraulics]
+2021-05-25 18:45:30 [root] INFO:      |__ [Integrated Circuits]
+2021-05-25 18:45:30 [root] INFO:      |__ [Labor & Fees]
+2021-05-25 18:45:30 [root] INFO:      |__ [Laboratory Equipment]
+2021-05-25 18:45:30 [root] INFO:      |__ [Lighting]
+2021-05-25 18:45:30 [root] INFO:      |__ [Literature]
+2021-05-25 18:45:30 [root] INFO:      |__ [Machine Parts]
+2021-05-25 18:45:30 [root] INFO:      |__ [Machines]
+2021-05-25 18:45:30 [root] INFO:      |__ [Marketing]
+2021-05-25 18:45:30 [root] INFO:      |__ [Material Handling]
+2021-05-25 18:45:30 [root] INFO:      |__ [Medical Equipment]
+2021-05-25 18:45:30 [root] INFO:      |__ [Motors/GearBox/Clutch]
+2021-05-25 18:45:30 [root] INFO:      |__ [Office Supplies]
+2021-05-25 18:45:30 [root] INFO:      |__ [Panel Accessories]
+2021-05-25 18:45:30 [root] INFO:      |__ [Personal Protective Equipment]
+2021-05-25 18:45:30 [root] INFO:      |__ [Pilot Devices]
+2021-05-25 18:45:30 [root] INFO:      |__ [PLCs/Machine Control]
+2021-05-25 18:45:30 [root] INFO:      |__ [Plumbing]
+2021-05-25 18:45:30 [root] INFO:      |__ [Pneumatics]
+2021-05-25 18:45:30 [root] INFO:      |__ [Power Supplies]
+2021-05-25 18:45:30 [root] INFO:      |__ [Printers]
+2021-05-25 18:45:30 [root] INFO:      |__ [Pumps]
+2021-05-25 18:45:30 [root] INFO:      |__ [RF]
+2021-05-25 18:45:30 [root] INFO:      |__ [Safety Systems]
+2021-05-25 18:45:30 [root] INFO:      |__ [Scales]
+2021-05-25 18:45:30 [root] INFO:      |__ [Security]
+2021-05-25 18:45:30 [root] INFO:      |__ [Semiconductors]
+2021-05-25 18:45:30 [root] INFO:      |__ [Sensors & Switches]
+2021-05-25 18:45:30 [root] INFO:      |__ [Servo Products]
+2021-05-25 18:45:30 [root] INFO:      |__ [Telecommunications]
+2021-05-25 18:45:30 [root] INFO:      |__ [Test Equipment]
+2021-05-25 18:45:30 [root] INFO:      |__ [Tools]
+2021-05-25 18:45:30 [root] INFO:      |__ [Traffic Products]
+2021-05-25 18:45:30 [root] INFO:      |__ [Transformers]
+2021-05-25 18:45:30 [root] INFO:      |__ [Transmission Distribut. Relays]
+2021-05-25 18:45:30 [root] INFO:      |__ [Uncategorized]
+2021-05-25 18:45:30 [root] INFO:      |__ [Valves]
+2021-05-25 18:45:30 [root] INFO:      |__ [Welding]
+2021-05-25 18:45:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=3&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:45:33 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Air Compressor]
+2021-05-25 18:45:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Air Compressor/Air Compressor]
+2021-05-25 18:45:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=3&CategoryId=112&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Air Compressor/Air Compressor Part]
+2021-05-25 18:45:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=3&CategoryId=454&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Air Compressor/delete this]
+2021-05-25 18:45:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=3&CategoryId=9775&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:45:38 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Contactors & Starters]
+2021-05-25 18:45:38 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Contactors & Starters/Arc Shute]
+2021-05-25 18:45:38 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&CategoryId=283&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:38 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Contactors & Starters/Auxiliary Contact]
+2021-05-25 18:45:38 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&CategoryId=140&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:38 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Contactors & Starters/Contact Kit]
+2021-05-25 18:45:38 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&CategoryId=139&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:38 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Contactors & Starters/Contactor]
+2021-05-25 18:45:38 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&CategoryId=10&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:38 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Contactors & Starters/Contactor/Starter Accessory]
+2021-05-25 18:45:38 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&CategoryId=141&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:38 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Contactors & Starters/Contactor/Starter Coil]
+2021-05-25 18:45:38 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&CategoryId=138&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:38 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Contactors & Starters/Control Part]
+2021-05-25 18:45:38 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&CategoryId=5972&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:38 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Contactors & Starters/Solid State Overload/Relay]
+2021-05-25 18:45:38 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&CategoryId=136&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:38 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Contactors & Starters/Starter]
+2021-05-25 18:45:38 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&CategoryId=135&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:38 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Contactors & Starters/Thermal Overload/Heater]
+2021-05-25 18:45:38 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&CategoryId=137&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:45:41 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Consumer Goods]
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Appliance/Appliance Part]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=786&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Beauty Supply]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=5593&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Beverage]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=5971&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Bottle Warmer]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=514&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Calculator]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=476&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Clock]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=572&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Compactor]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=5840&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Dishwasher]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=537&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Fountain]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=5717&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Home Good]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=660&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Lotion]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=5757&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Mixer]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=3690&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Pencil Sharpener]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=5873&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Pricing Gun/Label Printer]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=519&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Shredder]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=475&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Spray Bottle]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=558&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Toy]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=5775&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:41 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Consumer Goods/Utensil]
+2021-05-25 18:45:41 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=5723&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:45:45 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Computer]
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Communication Cable/Adaptor]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=763&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Communication Card]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=194&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Communication Converter]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=380&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Communication Extender]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=262&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Computer]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=97&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Computer Accessory]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=714&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Computer Monitor]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=777&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Computer Power Supply]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=190&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Computer Scanner]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=426&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/CPU Rack]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=9788&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Credit Card Reader]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=737&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Data Encryptor]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=252&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Floppy Drive]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=99&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Graphics/Video Card]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=663&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Hard Drive]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=98&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Input Devices/Mouse/Pad/Track Ball]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=5605&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Keyboard/Pad/Pen/Mouse]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=498&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Memory Board]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=100&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Modem]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=328&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Motherboard]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=779&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Networking Router]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=420&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/PDA/Tablet]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=5677&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Track Ball]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=521&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/USB]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=5567&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:45 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Computer/Wireless Card]
+2021-05-25 18:45:45 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=179&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:45:50 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Components]
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Battery]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=413&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Capacitor]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=131&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Connector/Terminal/Pin]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=304&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Crystal/Oscillator]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=279&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Dip Switch]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=376&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Fans/Thermal Management For Products and PC Board]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=5967&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Fuse Link PC Board Mount]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=76&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Heat Sink PC Board Mount]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=5963&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Inductor/Choke/Coil]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=5850&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/LCD/LED Display]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=340&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Prototype PC Board]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=9768&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Relay PC Board Mount]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=316&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Resistor]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=129&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Resistor Pack/Array]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=5756&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/RF Coil]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=277&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Socket/Lead/Holder]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=5970&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Switch PC Board Mount]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=479&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Thermistor/Current Limiter]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=6123&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Transformer PC Board Mount]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=9771&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Trim Potentiometers PC Board Mount]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=77&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Tube]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=290&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Varistor/MOV]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=379&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:50 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Components/Z Strip]
+2021-05-25 18:45:50 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=5879&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:45:53 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Commercial Product Parts]
+2021-05-25 18:45:53 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Commercial Product Parts/Miniature Indicator Light]
+2021-05-25 18:45:53 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&CategoryId=75&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:53 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Commercial Product Parts/Miniature Photoelectric]
+2021-05-25 18:45:53 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&CategoryId=50&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:53 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Commercial Product Parts/Miniature Potentiometer]
+2021-05-25 18:45:53 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&CategoryId=375&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:53 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Commercial Product Parts/Miniature Pushbutton]
+2021-05-25 18:45:53 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&CategoryId=374&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:53 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Commercial Product Parts/Miniature Rocker Switch]
+2021-05-25 18:45:53 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&CategoryId=74&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:53 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Commercial Product Parts/Miniature Selector Switch]
+2021-05-25 18:45:53 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&CategoryId=480&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:53 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Commercial Product Parts/Miniature Snap Action Switch]
+2021-05-25 18:45:53 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&CategoryId=292&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:53 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Commercial Product Parts/Miniature Toggle Switch]
+2021-05-25 18:45:53 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&CategoryId=72&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:53 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Commercial Product Parts/Range Switch]
+2021-05-25 18:45:53 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&CategoryId=513&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:45:57 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Circuit Breaker]
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Air Breaker]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=170&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/App/Comm Circuit Breaker]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=70&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Buss Bar]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=385&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Buss Way]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=168&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Buss Way Switch/Plug]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=169&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Circuit Breaker Accessory]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=463&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Circuit Breaker Trip]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=742&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Din Rail Mount Circuit Breaker]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=6&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/GFCI In-Line Box]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=730&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Load Center Accessory]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=720&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Load Center Circuit Breaker]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=719&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Load Center/Panel Board]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=171&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Molded Case Circuit Breaker]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=166&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Panel Mount Circuit Breaker]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=312&InStockFlag=false&PageSize=10000000
+2021-05-25 18:45:57 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Circuit Breaker/Power Monitoring System]
+2021-05-25 18:45:57 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=474&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=14&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:00 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Chemicals]
+2021-05-25 18:46:00 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Chemicals/Aerosol]
+2021-05-25 18:46:00 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=14&CategoryId=465&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:00 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Chemicals/Chemical]
+2021-05-25 18:46:00 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=14&CategoryId=769&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:04 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Camera & Vision]
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Cable for Camera]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=716&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Camera Accessory]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=362&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Camera Head]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=355&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/CCD Camera]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=240&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Character Inspector/Reader/Rasterizer]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=5906&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Controller for Camera]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=356&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Enclosure for Camera]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=352&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Illuminator]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=5778&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Lens for Camera]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=297&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Light Source]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=357&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Optics Mirror]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=747&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Pan Tilt Camera]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=5650&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Pattern Verifier]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=5835&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Polarizing Filter]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=746&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Video Camera]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=536&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Vision System Assembly]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=392&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Vision System Software]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=361&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:04 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Camera & Vision/Vision System Strobe Light]
+2021-05-25 18:46:04 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=242&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=12&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:08 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Cable and Wire]
+2021-05-25 18:46:08 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Cable and Wire/Audio Visual Cable]
+2021-05-25 18:46:08 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=12&CategoryId=364&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:08 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Cable and Wire/Cable for Computer Nework Etc…]
+2021-05-25 18:46:08 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=12&CategoryId=740&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:08 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Cable and Wire/Electrical Cable/Wire]
+2021-05-25 18:46:08 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=12&CategoryId=5&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:08 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Cable and Wire/Heat Shrink Tubing]
+2021-05-25 18:46:08 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=12&CategoryId=823&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:08 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Cable and Wire/Industrial Computer Cable]
+2021-05-25 18:46:08 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=12&CategoryId=192&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:12 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Building Maintenance]
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Abrasive]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5591&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Absorbent]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5647&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Adhesive]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=443&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Anchor]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5714&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Bell]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=681&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Broom]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5765&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Bucket]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5583&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Building Material]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5700&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Bumper/Protector]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=687&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Cart]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=553&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Caulk]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5801&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Container]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5653&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Deck Part]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=594&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Door Knob]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=592&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Door/Door Part]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5541&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Drop Cloth/Cloth]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5845&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Fence Material/Part]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5772&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Floor Buffer]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=556&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Gas Meter]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5760&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Hand Cleaner/Sanitizer]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=766&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Industrial Battery]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=378&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Intercom/Speaker]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=504&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Janitorial Supply]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5562&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Key/Key Caddy/Key Set]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5762&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Ladder]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=767&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Landscaping/Grounds Maintenance]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5725&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Loctite/Thread Lock]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5710&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Lubricant]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=444&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Metal Stock]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5739&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/MOP]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5825&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Paint]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=534&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Paint Brush]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5883&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Painting Supply]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5648&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Pallet Jack]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=520&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Parking Cone]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5658&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Putty]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5877&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Reinforcer]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5554&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Sealant]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=736&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Sign]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=776&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Solar Panel]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=762&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Spill Control]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=9770&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Storage Tank]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=587&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Time Clock]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=718&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Time/Intercom Controller]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=573&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Tread]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5601&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Vacuum Cleaner]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=566&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Vending Machine]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=526&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Water Meter]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=5859&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:12 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Building Maintenance/Window Part]
+2021-05-25 18:46:12 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=593&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:15 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Bar Code Equipment]
+2021-05-25 18:46:15 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Bar Code Equipment/Bar Code Accessory]
+2021-05-25 18:46:15 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&CategoryId=567&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:15 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Bar Code Equipment/Bar Code Printer]
+2021-05-25 18:46:15 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&CategoryId=772&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:15 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Bar Code Equipment/Bar Code Scanner Cable]
+2021-05-25 18:46:15 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&CategoryId=642&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:15 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Bar Code Equipment/Bar Code Scanner Controller]
+2021-05-25 18:46:15 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&CategoryId=643&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:15 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Bar Code Equipment/Bar Code Scanner Hand Held]
+2021-05-25 18:46:15 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&CategoryId=646&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:15 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Bar Code Equipment/Bar Code Scanner Housing]
+2021-05-25 18:46:15 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&CategoryId=644&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:15 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Bar Code Equipment/Bar Code Scanner Industrial]
+2021-05-25 18:46:15 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&CategoryId=31&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:15 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Bar Code Equipment/Bar Code Scanner Mtg Bracket]
+2021-05-25 18:46:15 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&CategoryId=641&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:15 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Bar Code Equipment/Bar Code Scanner Power supply]
+2021-05-25 18:46:15 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&CategoryId=645&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:19 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Automotive]
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/12VDC Automotive Power Inverter]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=5968&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Air Filter]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=704&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Alternator]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=610&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Automotive Accessory]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=665&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Automotive Engine Part]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=5969&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Automotive Gauge]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=518&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Automotive Ignition/Starter]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=373&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Automotive/Truck Part]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=5547&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Belts Automotive]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=342&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Brake Pad]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=530&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Breather Filter]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=709&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Coolant Filter]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=705&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Diagnostic Equipment]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=805&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Exhaust Manifold]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=441&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Fuel Container]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=602&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Fuel Filter]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=706&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Fuel Injector]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=640&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Grease]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=735&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Oil Filter]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=707&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Oil/Water Separator Filter]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=708&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:19 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Automotive/Wiper Blade]
+2021-05-25 18:46:19 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=5791&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:23 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Audio Visual]
+2021-05-25 18:46:23 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Audio Visual/Audio Amplifier]
+2021-05-25 18:46:23 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=472&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:23 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Audio Visual/Audio Visual Control Module]
+2021-05-25 18:46:23 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=407&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:23 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Audio Visual/Audio Visual Product]
+2021-05-25 18:46:23 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=5705&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:23 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Audio Visual/CD/DVD/BRAY Disc/Player]
+2021-05-25 18:46:23 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=569&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:23 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Audio Visual/Headphone]
+2021-05-25 18:46:23 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=557&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:23 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Audio Visual/Microphone]
+2021-05-25 18:46:23 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=436&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:23 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Audio Visual/Portable Stereo System]
+2021-05-25 18:46:23 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=515&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:23 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Audio Visual/Pre Amplifier]
+2021-05-25 18:46:23 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=5597&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:23 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Audio Visual/Projector]
+2021-05-25 18:46:23 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=5671&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:23 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Audio Visual/Remote Control]
+2021-05-25 18:46:23 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=570&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:23 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Audio Visual/Speaker]
+2021-05-25 18:46:23 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=5572&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:24 [scrapy.extensions.logstats] INFO: Crawled 16 pages (at 16 pages/min), scraped 0 items (at 0 items/min)
+2021-05-25 18:46:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=6&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:26 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Astrological]
+2021-05-25 18:46:26 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Astrological/Telescope]
+2021-05-25 18:46:26 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=6&CategoryId=532&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=5&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:30 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Apparel]
+2021-05-25 18:46:30 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Apparel/Boot Cover]
+2021-05-25 18:46:30 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=5&CategoryId=466&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:30 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Apparel/Clothing]
+2021-05-25 18:46:30 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=5&CategoryId=473&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:30 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Apparel/Glove]
+2021-05-25 18:46:30 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=5&CategoryId=554&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:30 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Apparel/Hair Net/Beard Cover]
+2021-05-25 18:46:30 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=5&CategoryId=5707&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:30 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Apparel/Hearing Protection]
+2021-05-25 18:46:30 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=5&CategoryId=568&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:30 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Apparel/Lanyard]
+2021-05-25 18:46:30 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=5&CategoryId=5767&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:31 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-05-25 18:46:31 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2021-05-25 18:46:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=70&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:33 [root] INFO: ===> SCRAPING CATEGORY NAME ----> [Welding]
+2021-05-25 18:46:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Welding/Arc Welder]
+2021-05-25 18:46:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=70&CategoryId=821&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Welding/Hot Plate Welder]
+2021-05-25 18:46:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=70&CategoryId=820&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Welding/Laser Welder]
+2021-05-25 18:46:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=70&CategoryId=679&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Welding/Spin Welder]
+2021-05-25 18:46:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=70&CategoryId=819&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Welding/Ultrasonic Welder]
+2021-05-25 18:46:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=70&CategoryId=811&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Welding/Weld Controller]
+2021-05-25 18:46:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=70&CategoryId=5785&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Welding/Welder Generator]
+2021-05-25 18:46:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=70&CategoryId=3676&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Welding/Welding Cable/Accessory]
+2021-05-25 18:46:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=70&CategoryId=428&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Welding/Welding Mask]
+2021-05-25 18:46:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=70&CategoryId=107&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:33 [root] INFO: ---> SCRAPING SUBCATEGORY --> [Welding/Welding Power Supply]
+2021-05-25 18:46:33 [root] INFO: Scraping url --> https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=70&CategoryId=674&InStockFlag=false&PageSize=10000000
+2021-05-25 18:46:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=3&CategoryId=9775&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=3&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&CategoryId=137&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=20&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&CategoryId=5723&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=19&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&CategoryId=179&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=18&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&CategoryId=5879&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=17&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&CategoryId=513&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=16&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:46:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&CategoryId=474&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=15&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:47:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=14&CategoryId=769&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=14&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:47:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&CategoryId=242&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=13&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:47:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=12&CategoryId=192&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=12&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:47:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&CategoryId=593&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=11&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:47:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&CategoryId=645&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=10&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:47:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&CategoryId=5791&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=8&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:47:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&CategoryId=5572&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=7&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:47:24 [scrapy.extensions.logstats] INFO: Crawled 33 pages (at 17 pages/min), scraped 0 items (at 0 items/min)
+2021-05-25 18:47:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=6&CategoryId=532&InStockFlag=false&PageSize=10000000> (referer: https://www.radwell.co.uk/en-GB/Search/Advanced/SIEMENS?SearchText=&SortField=&ABSale=False&SearchType=Default&SortDirection=0&Manufacturer=SIEMENS&SearchMethod=starts&Description=&TopCategoryId=6&InStockFlag=false&PageSize=10000000)
+2021-05-25 18:47:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 30786,
+ 'downloader/request_count': 34,
+ 'downloader/request_method_count/GET': 34,
+ 'downloader/response_bytes': 890279,
+ 'downloader/response_count': 34,
+ 'downloader/response_status_count/200': 34,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2021, 5, 25, 18, 47, 26, 246823),
+ 'log_count/DEBUG': 35,
+ 'log_count/INFO': 575,
+ 'memusage/max': 157593600,
+ 'memusage/startup': 71991296,
+ 'request_depth_max': 3,
+ 'response_received_count': 34,
+ 'scheduler/dequeued': 33,
+ 'scheduler/dequeued/memory': 33,
+ 'scheduler/enqueued': 5977,
+ 'scheduler/enqueued/memory': 5977,
+ 'start_time': datetime.datetime(2021, 5, 25, 18, 45, 24, 556324)}
+2021-05-25 18:47:26 [scrapy.core.engine] INFO: Spider closed (shutdown)
