@@ -7,10 +7,10 @@ services:
         build: .
         # command: python manage.py runserver 0.0.0.0:8000
         container_name: django_server
-        volumes:
-            - .:/usr/src/app
         environment: 
             - SECRET_KEY=sigma274ing@dwEtRusT#
+        volumes:
+            - static:/static
         ports:
             - "8000:8000"
         depends_on:
@@ -18,17 +18,17 @@ services:
         networks:
             - backend
     scrapyd-service:
-        image: germey/scrapyd
+        build:
+            context: app
+            dockerfile: ./Dockerfile
+        # dockerfile: ./scrapy_app/Dockerfile
         container_name: scrapyd_server
-        volumes:
-            - .:/usr/src/app
-        working_dir: /usr/src/app/scrapy_app
         ports:
             - "6800:6800"
         networks:
             - backend
     nginx:
-        build: ./nginx
+        build: app/nginx
         volumes: 
             - static:/static
         ports: 
