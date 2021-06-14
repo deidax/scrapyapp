@@ -18,8 +18,9 @@ $(document).ready(function() {
     finished = []
     pending = []
     running = []
+    
    
-    $.get('http://0.0.0.0:6800/listjobs.json?project=default', (result) => {
+    $.get(origin+':6800/listjobs.json?project=default', (result) => {
         console.log(result)
         status = result.status
         node_name = result.node_name
@@ -56,7 +57,7 @@ $(document).ready(function() {
                 {
                     'data': null,
                     'render': function (data, type, row) {
-                        return '<a href="http://0.0.0.0:6800/logs/default/'+row.spider+'/'+row.id+'.log" class="btn btn-info active" role="button" aria-pressed="true" target="_blank"><i class="fas fa-file-medical-alt mr-1"></i> Logs</a>'
+                        return '<a href="'+origin+':6800/logs/default/'+row.spider+'/'+row.id+'.log" class="btn btn-info active" role="button" aria-pressed="true" target="_blank"><i class="fas fa-file-medical-alt mr-1"></i> Logs</a>'
                     }
                 },
                 {
@@ -79,7 +80,7 @@ $(document).ready(function() {
 
         $('#running tbody').on('click', 'button', function () {
             var jobid = $(this).attr('id');
-            $.post('http://0.0.0.0:6800/cancel.json', { project:"default", job:jobid }, function(){
+            $.post(origin+':6800/cancel.json', { project:"default", job:jobid }, function(){
                 location.reload()
             })
         });

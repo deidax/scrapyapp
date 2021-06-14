@@ -27,6 +27,11 @@ services:
             - "6800:6800"
         networks:
             - backend
+        # deploy:
+        #     resources:
+        #         limits:
+        #             cpus: "2"
+        #             memory: 2G
     nginx:
         build: app/nginx
         volumes: 
@@ -40,6 +45,12 @@ services:
 networks:
     backend:
         driver: bridge
-
 volumes: 
     static:
+
+# volumes: 
+#     static:
+#         driver: azure_file
+#         driver_opts: 
+#             share_name: static
+#             storage_account_name: az-khl-strorage
