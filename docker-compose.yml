@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 services:
   ###
   # services
@@ -11,6 +11,7 @@ services:
             - SECRET_KEY=sigma274ing@dwEtRusT#
         volumes:
             - static:/static
+            - appdata:/db
         ports:
             - "8000:8000"
         depends_on:
@@ -23,15 +24,20 @@ services:
             dockerfile: ./Dockerfile
         # dockerfile: ./scrapy_app/Dockerfile
         container_name: scrapyd_server
+        volumes: 
+            - appdata:/db
         ports:
             - "6800:6800"
         networks:
             - backend
-        # deploy:
-        #     resources:
-        #         limits:
-        #             cpus: "2"
-        #             memory: 2G
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.8"
+                    memory: 1500M
+                # reservations:
+                #     cpus: "0.7"
+                #     memory: 1000M
     nginx:
         build: app/nginx
         volumes: 
@@ -47,10 +53,4 @@ networks:
         driver: bridge
 volumes: 
     static:
-
-# volumes: 
-#     static:
-#         driver: azure_file
-#         driver_opts: 
-#             share_name: static
-#             storage_account_name: az-khl-strorage
+    appdata:

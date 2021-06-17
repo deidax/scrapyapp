@@ -60,6 +60,7 @@ class IcrawlerSpider(scrapy.Spider):
         urls = self.generate_next_url(response)
         categories = self.parse_categories(response)
         print(self.FEED_URI)
+
         logging.info("===> CATEGORIES -->")
         for index, url in enumerate(urls):
             # for search_pattern in search_patterns:
@@ -126,7 +127,7 @@ class IcrawlerSpider(scrapy.Spider):
             brand = product.xpath('.//div[@class="brand searchResulti"]/h2/text()').get()
             name = product.xpath('.//div[@class="partno searchResulti"]/h2/text()').get()
             description = product.xpath('.//p[@class="desc searchResulti"]/text()').get()
-
+            
             product_dict = {
                 'manufacturer': manufacturer,
                 'brand': brand,
@@ -135,7 +136,7 @@ class IcrawlerSpider(scrapy.Spider):
                 'url': response.urljoin(url)
             }
 
-            item = Product(url=url,manufacturer=manufacturer,brand=brand,name=name,description=description)
+            item = Product(url=response.urljoin(url),manufacturer=manufacturer,brand=brand,name=name,description=description)
             item.save()
 
             
@@ -144,7 +145,7 @@ class IcrawlerSpider(scrapy.Spider):
 
             yield product_dict
 
-            return product_dict
+            # return product_dict
 
         
 

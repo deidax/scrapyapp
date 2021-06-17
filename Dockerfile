@@ -26,5 +26,5 @@ COPY app/entrypoint.sh /
 EXPOSE 6800
 # WORKDIR /usr/src/app/scrapy_app
 
-CMD ["scrapyd"]
+# CMD ["scrapyd"]
 ENTRYPOINT ["bash", "/entrypoint.sh" ]
